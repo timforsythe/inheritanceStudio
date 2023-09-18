@@ -36,17 +36,17 @@ public class Checkbox extends Question {
     @Override
     public int getAnswers() {
         ArrayList<Integer> usersAnswers = new ArrayList<>();
-        System.out.println("For this question, there are multiple correct answers. To begin answering the question, enter 'y'.");
+        System.out.println("For this question, there could be multiple correct answers. To begin answering the question, simply press 'y'.");
         Scanner userContinue = new Scanner(System.in);
         String goingToContinue = userContinue.nextLine();
         while (goingToContinue.indexOf('y') >= 0 && usersAnswers.size() <= possibleAnswers.size()) {
-            System.out.println("What will your answer be? Enter the number of the option you believe is correct. For example, to select the first option, enter 1");
+            System.out.println("What will your answer(s) be? Enter the number of an answer you believe is correct. For example, to select the first option, enter 1");
             Scanner userAnswer = new Scanner(System.in);
             String answer = userAnswer.nextLine();
             int option = Integer.parseInt(answer);
             usersAnswers.add(option);
 
-            System.out.println("For this question, there are multiple correct answers. To continue answering the question, enter 'y'. To stop, enter 'n'");
+            System.out.println("For this question, there could be multiple correct answers. To continue selecting answers, press 'y'. If you are finished, press 'n'");
             goingToContinue = userContinue.nextLine();
         }
 

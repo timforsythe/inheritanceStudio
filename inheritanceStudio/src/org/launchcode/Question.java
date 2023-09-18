@@ -1,6 +1,6 @@
 package org.launchcode;
 
-public class Question {
+public abstract class Question {
     private int pointValue;
     private String text;
 

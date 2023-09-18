@@ -29,7 +29,7 @@ public class TrueOrFalse extends Question {
     @Override
     public int getAnswers() {
         Scanner answer = new Scanner(System.in);
-        System.out.println("What will your answer be? Type 't' for True and 'f' for False");
+        System.out.println("Type 't' for True or 'f' for False");
         String userAnswer = answer.nextLine();
         if (userAnswer.indexOf('t') >= 0) {
             if (isCorrectAnswer(true)) {
